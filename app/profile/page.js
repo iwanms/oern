@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 
-const Profile = () => {
+export default function Profile() {
   const searchParams = useSearchParams();
 
   const sort = searchParams.get("name");
@@ -13,6 +13,4 @@ const Profile = () => {
       <div>umur {page}</div>
     </div>
   );
-};
-
-export default Profile;
+}
