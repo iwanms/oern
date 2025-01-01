@@ -1,8 +1,4 @@
 "use client";
-
-import Profile from "./profile/page";
-import dynamic from "next/dynamic";
-import Table from "@/components/table/page";
 import { useState } from "react";
 
 export default function Home() {
