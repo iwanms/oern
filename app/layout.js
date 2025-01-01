@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.scss";
+import Clock from "@/components/clock/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <div className="wrapper">
+          <div className="navbar">
+            <div className="title">
+              <h1>TITLE PAGE</h1>
+            </div>
+            <div className="time">
+              <Clock />
+            </div>
+          </div>
+          <div className="main-content">{children}</div>
+          <div className="footer">Footer</div>
+        </div>
       </body>
     </html>
   );
